@@ -2,9 +2,9 @@ import argparse
 import json
 from pathlib import Path
 
-from parsers.windows_event import parse_windows_event
-from parsers.auth import parse_auth_event
-from parsers.apache import parse_apache_event
+from parsers.windows_event import parse_windows_log
+from parsers.auth import parse_auth_log
+from parsers.apache import parse_apache_log
 
 from log_detector import detect_log_type
 #from display import display_results
@@ -33,11 +33,11 @@ def main(argv=None) -> None:
     ioc_type = detect_log_type(first_line)
 
     if ioc_type == "windows_event":
-        result = parse_windows_event(args.log)
+        result = parse_windows_log(args.log)
     elif ioc_type == "auth_log":
-        result = parse_auth_event(args.log)
+        result = parse_auth_log(args.log)
     elif ioc_type == "apache":
-        result = parse_apache_event(args.log)
+        result = parse_apache_log(args.log)
     else:
         print("Unknown Log type")
         raise SystemExit(1)

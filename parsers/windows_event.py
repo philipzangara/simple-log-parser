@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 
-def parse_windows_event(filepath: str) -> list:
+def parse_windows_log(filepath: str) -> list:
     events = []
 
     # Microsoft namespace required for all element lookups in Windows Event XML
@@ -31,5 +31,5 @@ def parse_windows_event(filepath: str) -> list:
             "computer": computer,
             "data": data_dict
         })
-        
+
     return events

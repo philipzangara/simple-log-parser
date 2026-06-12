@@ -1,0 +1,7 @@
+Jun  9 14:23:01 WORKSTATION-01 sshd[1234]: Failed password for root from 192.168.1.100 port 22 ssh2
+Jun  9 14:23:03 WORKSTATION-01 sshd[1235]: Failed password for root from 192.168.1.100 port 22 ssh2
+Jun  9 14:23:05 WORKSTATION-01 sshd[1236]: Failed password for root from 192.168.1.100 port 22 ssh2
+Jun  9 14:23:07 WORKSTATION-01 sshd[1237]: Failed password for root from 192.168.1.100 port 22 ssh2
+Jun  9 14:23:09 WORKSTATION-01 sshd[1238]: Failed password for root from 192.168.1.100 port 22 ssh2
+Jun  9 14:23:11 WORKSTATION-01 sshd[1239]: Accepted password for user from 192.168.1.50 port 22 ssh2
+Jun  9 14:24:01 WORKSTATION-01 sudo[1240]: user : TTY=pts/0 ; PWD=/home/user ; USER=root ; COMMAND=/bin/bash

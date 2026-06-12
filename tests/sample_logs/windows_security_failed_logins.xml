@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Events>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'>
+<System><Provider Name='Microsoft-Windows-Security-Auditing'/><EventID>4625</EventID><TimeCreated SystemTime='2024-01-01T00:00:01.000000000Z'/><EventRecordID>00001</EventRecordID><Channel>Security</Channel><Computer>WORKSTATION-01</Computer><Security/></System>
+<EventData><Data Name='TargetUserName'>user</Data><Data Name='TargetDomainName'>WORKSTATION-01</Data><Data Name='LogonType'>3</Data><Data Name='IpAddress'>192.168.1.100</Data><Data Name='FailureReason'>Unknown user name or bad password</Data><Data Name='Status'>0xC000006D</Data><Data Name='SubStatus'>0xC0000064</Data></EventData>
+</Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'>
+<System><Provider Name='Microsoft-Windows-Security-Auditing'/><EventID>4625</EventID><TimeCreated SystemTime='2024-01-01T00:00:02.000000000Z'/><EventRecordID>00002</EventRecordID><Channel>Security</Channel><Computer>WORKSTATION-01</Computer><Security/></System>
+<EventData><Data Name='TargetUserName'>user</Data><Data Name='TargetDomainName'>WORKSTATION-01</Data><Data Name='LogonType'>3</Data><Data Name='IpAddress'>192.168.1.100</Data><Data Name='FailureReason'>Unknown user name or bad password</Data><Data Name='Status'>0xC000006D</Data><Data Name='SubStatus'>0xC0000064</Data></EventData>
+</Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'>
+<System><Provider Name='Microsoft-Windows-Security-Auditing'/><EventID>4625</EventID><TimeCreated SystemTime='2024-01-01T00:00:03.000000000Z'/><EventRecordID>00003</EventRecordID><Channel>Security</Channel><Computer>WORKSTATION-01</Computer><Security/></System>
+<EventData><Data Name='TargetUserName'>user</Data><Data Name='TargetDomainName'>WORKSTATION-01</Data><Data Name='LogonType'>3</Data><Data Name='IpAddress'>192.168.1.100</Data><Data Name='FailureReason'>Unknown user name or bad password</Data><Data Name='Status'>0xC000006D</Data><Data Name='SubStatus'>0xC0000064</Data></EventData>
+</Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'>
+<System><Provider Name='Microsoft-Windows-Security-Auditing'/><EventID>4625</EventID><TimeCreated SystemTime='2024-01-01T00:00:04.000000000Z'/><EventRecordID>00004</EventRecordID><Channel>Security</Channel><Computer>WORKSTATION-01</Computer><Security/></System>
+<EventData><Data Name='TargetUserName'>user</Data><Data Name='TargetDomainName'>WORKSTATION-01</Data><Data Name='LogonType'>3</Data><Data Name='IpAddress'>192.168.1.100</Data><Data Name='FailureReason'>Unknown user name or bad password</Data><Data Name='Status'>0xC000006D</Data><Data Name='SubStatus'>0xC0000064</Data></EventData>
+</Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'>
+<System><Provider Name='Microsoft-Windows-Security-Auditing'/><EventID>4625</EventID><TimeCreated SystemTime='2024-01-01T00:00:05.000000000Z'/><EventRecordID>00005</EventRecordID><Channel>Security</Channel><Computer>WORKSTATION-01</Computer><Security/></System>
+<EventData><Data Name='TargetUserName'>user</Data><Data Name='TargetDomainName'>WORKSTATION-01</Data><Data Name='LogonType'>3</Data><Data Name='IpAddress'>192.168.1.100</Data><Data Name='FailureReason'>Unknown user name or bad password</Data><Data Name='Status'>0xC000006D</Data><Data Name='SubStatus'>0xC0000064</Data></EventData>
+</Event>
+</Events>

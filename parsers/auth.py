@@ -1,6 +1,6 @@
 import re
 
-def parse_auth_log(filepath: str) -> dict:
+def parse_auth_log(filepath: str) -> list:
 
     events = []
 
@@ -9,14 +9,12 @@ def parse_auth_log(filepath: str) -> dict:
     
     with open(filepath, 'r') as f:
         for line in f:
-            if pattern.match(line):
-                match = pattern.match(line)
-
+            match = pattern.match(line)
+            if match:
                 events.append({
-                    "month": match.group('month'),
-                    "day": match.group('day'),
-                    "time": match.group('time'),
-                    "hostname": match.group('hostname'),
+                    "month": match.group('month'), 
+                    "day": match.group('day'), e 
+                    "hostname": match.group('hostname'), 
                     "process": match.group('process'),
                     "message": match.group('message')
         })            

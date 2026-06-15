@@ -15,9 +15,9 @@ def parse_windows_log(filepath: str) -> list:
 
          # System section contains metadata about the event
         system = event.find('e:System', ns)
-        event_id = system.find('e:EventID', ns).text
-        time = system.find('e:TimeCreated', ns).get('SystemTime')
-        computer = system.find('e:Computer', ns).text
+        event_id = system.find('e:EventID', ns).text # type: ignore 
+        time = system.find('e:TimeCreated', ns).get('SystemTime') # type: ignore 
+        computer = system.find('e:Computer', ns).text # type: ignore 
 
         # EventData contains variable fields depending on the EventID
         # Extract all Data elements generically into a dict

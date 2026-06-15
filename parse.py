@@ -7,10 +7,13 @@ from parsers.auth import parse_auth_log
 from parsers.apache import parse_apache_log
 
 from log_detector import detect_log_type
+from ioc_extractor import extract_iocs
+
 #from display import display_results
 
-def display_results(result):
-    print(result)
+def display_results(result, logtype):
+    #print(result)
+    print(extract_iocs(result, logtype))
     return
 
 def parse_args(argv=None):
@@ -45,7 +48,7 @@ def main(argv=None) -> None:
     if args.output == "json":
         print(json.dumps(result, indent=4, default=str))
     else:
-        display_results(result)
+        display_results(result, ioc_type)
 
 
 if __name__ == "__main__":

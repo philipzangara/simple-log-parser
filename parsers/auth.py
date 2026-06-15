@@ -13,7 +13,7 @@ def parse_auth_log(filepath: str) -> list:
             if match:
                 events.append({
                     "month": match.group('month'), 
-                    "day": match.group('day'), e 
+                    "day": match.group('day'), 
                     "hostname": match.group('hostname'), 
                     "process": match.group('process'),
                     "message": match.group('message')

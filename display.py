@@ -4,7 +4,7 @@
 from typing import Any
 
 def display_results(results: list, ioc_type: str, iocs: dict) -> None:
-    print("=== Simple Log Parser ===")
+    print("=== Simple Log Parser v1.0.0 ===")
     print()
     
     print_field("Log Type:", ioc_type)

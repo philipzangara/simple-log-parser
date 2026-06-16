@@ -30,8 +30,17 @@ def main(argv=None) -> None:
         print("  wevtutil epl <LogName> output.xml /ow:true")
         raise SystemExit(1)
     
-    with open(args.log, 'r') as f:
-        first_line = f.read(200)
+    try:
+        with open(args.log, 'r') as f:
+            first_line = f.read(200)
+    except FileNotFoundError:
+        print(f"Error: '{args.log}' not found")
+        raise SystemExit(1)
+ 
+    if not first_line.strip():
+        print(f"Error: '{args.log}' is empty or unreadable.")
+        raise SystemExit(1)
+
     ioc_type = detect_log_type(first_line)
 
     if ioc_type == "windows_event":
@@ -41,7 +50,7 @@ def main(argv=None) -> None:
     elif ioc_type == "apache":
         result = parse_apache_log(args.log)
     else:
-        print("Unknown Log type")
+        print(f"Error: Could not detect log type for '{args.log}'. File may be empty or unsupported format.")
         raise SystemExit(1)
     
     iocs = extract_iocs(result, ioc_type)

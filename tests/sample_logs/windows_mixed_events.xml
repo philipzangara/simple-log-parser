@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Events>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'>
+<System><Provider Name='Microsoft-Windows-Security-Auditing'/><EventID>4625</EventID><TimeCreated SystemTime='2024-01-01T00:00:01.000000000Z'/><EventRecordID>00001</EventRecordID><Channel>Security</Channel><Computer>WORKSTATION-01</Computer><Security/></System>
+<EventData><Data Name='TargetUserName'>admin</Data><Data Name='LogonType'>3</Data><Data Name='IpAddress'>185.220.101.45</Data><Data Name='Status'>0xC000006D</Data><Data Name='SubStatus'>0xC0000064</Data></EventData>
+</Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'>
+<System><Provider Name='Microsoft-Windows-Security-Auditing'/><EventID>4625</EventID><TimeCreated SystemTime='2024-01-01T00:00:02.000000000Z'/><EventRecordID>00002</EventRecordID><Channel>Security</Channel><Computer>WORKSTATION-01</Computer><Security/></System>
+<EventData><Data Name='TargetUserName'>administrator</Data><Data Name='LogonType'>3</Data><Data Name='IpAddress'>45.33.32.156</Data><Data Name='Status'>0xC000006D</Data><Data Name='SubStatus'>0xC0000064</Data></EventData>
+</Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'>
+<System><Provider Name='Microsoft-Windows-Security-Auditing'/><EventID>4688</EventID><TimeCreated SystemTime='2024-01-01T00:00:03.000000000Z'/><EventRecordID>00003</EventRecordID><Channel>Security</Channel><Computer>WORKSTATION-01</Computer><Security/></System>
+<EventData><Data Name='SubjectUserName'>user</Data><Data Name='NewProcessName'>C:\Windows\System32\cmd.exe</Data><Data Name='CommandLine'>cmd.exe /c powershell -EncodedCommand JABjAGwAaQBlAG4AdA==</Data><Data Name='Hashes'>MD5=44D88612FEA8A8F36DE82E1278ABB02F,SHA256=275A021BBFB6489E54D471899F7DB9D1663FC695EC2FE2A2C4538AABF651FD0F</Data></EventData>
+</Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'>
+<System><Provider Name='Microsoft-Windows-Security-Auditing'/><EventID>4624</EventID><TimeCreated SystemTime='2024-01-01T00:00:04.000000000Z'/><EventRecordID>00004</EventRecordID><Channel>Security</Channel><Computer>WORKSTATION-01</Computer><Security/></System>
+<EventData><Data Name='TargetUserName'>user</Data><Data Name='LogonType'>10</Data><Data Name='IpAddress'>203.0.113.42</Data></EventData>
+</Event>
+<Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'>
+<System><Provider Name='Microsoft-Windows-Security-Auditing'/><EventID>4688</EventID><TimeCreated SystemTime='2024-01-01T00:00:05.000000000Z'/><EventRecordID>00005</EventRecordID><Channel>Security</Channel><Computer>WORKSTATION-01</Computer><Security/></System>
+<EventData><Data Name='SubjectUserName'>user</Data><Data Name='NewProcessName'>C:\AtomicRedTeam\mimikatz.exe</Data><Data Name='CommandLine'>mimikatz.exe sekurlsa::logonpasswords</Data><Data Name='Hashes'>MD5=E930B05EFE23891D19BC354A4209BE3E,SHA256=92804FAAAB2175DC501D73E814663058C78C0A042675A8937266357BCFB96C50</Data></EventData>
+</Event>
+</Events>

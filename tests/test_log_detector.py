@@ -1,10 +1,13 @@
+# Unit tests for log_detector.py
+# Tests automatic detection of Windows Event XML, Apache, auth.log, and unknown log types
+
 import unittest
 from log_detector import detect_log_type
 
 class TestDetectLogType(unittest.TestCase):
 
     def test_windows_event(self):
-        self.assertEqual(detect_log_type("<xml> Sample</xml>"), "windows_event")
+        self.assertEqual(detect_log_type("<?xml version='1.0'?>"), "windows_event")
 
     def test_apache(self):
         self.assertEqual(detect_log_type("192.168.1.1 Blah Blah"), "apache")

@@ -1,3 +1,7 @@
+# Parses Windows Event XML exports into normalized event dicts
+# Input: filepath to XML exported from Event Viewer or wevtutil
+# Output: list of dicts with event_id, time, computer, and data fields
+
 import xml.etree.ElementTree as ET
 
 def parse_windows_log(filepath: str) -> list:
@@ -13,7 +17,7 @@ def parse_windows_log(filepath: str) -> list:
     # Each <Event> element is one Windows log entry
     for event in root.findall('e:Event', ns):
 
-         # System section contains metadata about the event
+        # System section contains metadata about the event
         system = event.find('e:System', ns)
         event_id = system.find('e:EventID', ns).text # type: ignore 
         time = system.find('e:TimeCreated', ns).get('SystemTime') # type: ignore 

@@ -1,3 +1,7 @@
+# Parses Apache/Nginx access logs into normalized event dicts
+# Input: filepath to access log in Combined Log Format
+# Output: list of dicts with ip, time, method, path, protocol, status, and size fields
+
 import re
 
 def parse_apache_log(filepath: str) -> list:
@@ -19,6 +23,6 @@ def parse_apache_log(filepath: str) -> list:
                     "protocol": match.group('protocol'),
                     "status": match.group('status'),
                     "size": match.group('size')
-        })            
+                })            
 
     return events

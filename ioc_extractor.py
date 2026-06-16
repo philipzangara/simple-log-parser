@@ -1,3 +1,8 @@
+# Extracts IOCs from parsed log events using pandas
+# Supports: IPs, usernames, hashes, URLs depending on log type
+# Input: list of normalized event dicts + log type string
+# Output: dict of deduplicated IOC lists
+
 import pandas as pd
 import re
 
@@ -20,7 +25,7 @@ def extract_iocs(events: list, log_type: str) -> dict:
 
     elif log_type == "auth_log":
         ip_pattern = re.compile(r'\d{1,3}(?:\.\d{1,3}){3}')
-        username_pattern  = re.compile(r'(?:for|user)\s+(\S+)\s+from')
+        username_pattern = re.compile(r'(?:for|user)\s+(\S+)\s+from')
         ips = df["message"].str.findall(ip_pattern).explode().dropna().unique().tolist()        
         usernames = df["message"].str.findall(username_pattern).explode().dropna().unique().tolist()
 
@@ -28,12 +33,9 @@ def extract_iocs(events: list, log_type: str) -> dict:
         ips = df["ip"].dropna().unique().tolist()
         urls = df["path"].dropna().unique().tolist()
 
-
     return {
         "IPs": ips,
         "Usernames": usernames,
         "Hashes": hashes,
         "URLs": urls
     }
-
-

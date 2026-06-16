@@ -1,6 +1,8 @@
+# Detects log file type based on first line content
+# Supports: Windows Event XML, auth.log, Apache access log
+# Returns: "windows_event", "auth_log", "apache", or "unknown"
+
 import ipaddress
-import re
-import tldextract
 
 def detect_log_type(first_line: str) -> str:
 

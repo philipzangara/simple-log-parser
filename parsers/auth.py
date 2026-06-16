@@ -1,3 +1,7 @@
+# Parses Linux auth.log files into normalized event dicts
+# Input: filepath to auth.log or similar syslog format
+# Output: list of dicts with month, day, time, hostname, process, and message fields
+
 import re
 
 def parse_auth_log(filepath: str) -> list:
@@ -14,9 +18,10 @@ def parse_auth_log(filepath: str) -> list:
                 events.append({
                     "month": match.group('month'), 
                     "day": match.group('day'), 
+                    "time": match.group('time'), 
                     "hostname": match.group('hostname'), 
                     "process": match.group('process'),
                     "message": match.group('message')
-        })            
+                })            
 
     return events

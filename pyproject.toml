@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simple-log-parser"
+version = "1.0.0"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas",
+    "pyyaml",
+]
+
+[project.scripts]
+simple-log-parser = "parse:main"
+
+[tool.setuptools]
+py-modules = ["parse", "log_detector", "ioc_extractor", "display", "helpers"]
+
+[tool.setuptools.packages.find]
+include = ["parsers*"]

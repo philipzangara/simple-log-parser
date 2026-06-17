@@ -65,6 +65,9 @@ Pipe extracted IPs into Simple IOC Lookup:
 ```
 python parse.py <logfile> --output json | jq -r '.iocs.IPs[]' | ForEach-Object { python ..\simple-ioc-lookup\enrich.py $_ }
 ```
+
+Requires [jq](https://jqlang.github.io/jq/download/) — install with `winget install jqlang.jq` on Windows.
+
 Tested using Python 3.10.11
 
 ## Requirements

@@ -14,7 +14,13 @@ def display_results(results: list, ioc_type: str, iocs: dict) -> None:
     print("=== Extracted IOCs ===")
     print_field("IPs:", ", ".join(iocs.get("IPs", [])) or "None")
     print_field("Usernames:", ", ".join(iocs.get("Usernames", [])) or "None")
-    print_field("Hashes:", ", ".join(iocs.get("Hashes", [])) or "None")
+    if iocs.get("Hashes"): # print hashes on separate lines
+        print_field("Hashes:", "")
+        for h in iocs.get("Hashes", []):
+            print(f"  {h}")
+    else:
+        print_field("Hashes:", "None")
+
     print_field("URLs:", ", ".join(iocs.get("URLs", [])) or "None")
     
 def print_field(label: str, value: Any) -> None:
